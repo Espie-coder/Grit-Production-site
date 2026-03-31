@@ -205,6 +205,7 @@
         letter-spacing: 4px;
         margin: 0;
         color: #6b705c; /* Olive */
+        text-shadow: 0 0 20px rgba(224, 176, 132, 0.4);
     }
     header p {
         font-size: 20px;
@@ -224,19 +225,22 @@
         color: #a2673f;
     }
     .btn {
-        display: inline-block;
-        padding: 14px 28px;
-        margin-top: 20px;
-        background-color: #a2673f; /* Terracotta */
-        color: white;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: background 0.3s, transform 0.3s;
-    }
-    .btn:hover {
-        background-color: #6b705c; /* Olive on hover */
-        transform: translateY(-3px);
-    }
+    background: linear-gradient(135deg, #c0562b, #e0b084);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(192, 86, 43, 0.4);
+}
+    .alt-section {
+    background-color: #ece6dc;
+    border-radius: 20px;
+}
 
     /* ===== Sections ===== */
     section {
@@ -255,12 +259,13 @@
         font-family: 'Playfair Display', serif;
         font-size: 36px;
         margin-bottom: 20px;
-        color: #6b705c;
+        color: #c0562b;
     }
     section p {
         font-size: 18px;
         line-height: 1.6;
     }
+    <div style="height:4px; background: linear-gradient(to right, #c0562b, #e0b084); margin:40px 0;"></div>
 
     /* ===== Portfolio / Gallery ===== */
     .gallery {
@@ -274,9 +279,9 @@
         border-radius: 10px;
         transition: transform 0.3s, box-shadow 0.3s;
     }
-    .gallery img:hover, .gallery video:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+   .gallery img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
     }
 
     /* ===== Contact Form ===== */
