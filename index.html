@@ -17,23 +17,87 @@
     body {
         margin: 0;
         font-family: 'Montserrat', sans-serif;
-        background-color: #f5f1eb; /* Beige */
-        color: #2e2e2e;
+       body {
+           background-color: #1a1a1a;
+           color: #f5f1eb;
+    }
+
+      section {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+   }
         overflow-x: hidden;
     }
     a {
         text-decoration: none;
         color: inherit;
     }
-    .container {
-    max-width: 900px;
+
+     form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
     margin: auto;
+    }
+
+    input, textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #6b705c;
+    border-radius: 6px;
+    font-size: 16px;
+    }
+
+    form button {
+    padding: 14px;
+    background: linear-gradient(135deg, #c0562b, #e0b084);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    }
+
+    /* TEXT CONTAINER (for headings & paragraphs) */
+    .container {
+    max-width: 800px;
+    margin-left: 60px;  /* keeps it away from edge but not centered */
+    margin-right: 20px;
+    }
+
+    section h2 {
+    color: #e0b084;
+   }
+
+   section p {
+    color: #ddd;
+   }
+
+    /* CENTERED CONTENT (for images/videos) */
+    .centered-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    }
+
+   /* GALLERY GRID */
+   .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    }
+
+   /* IMAGE STYLE */
+   .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
     }
 
     /* ===== Header ===== */
     header {
         height: 100vh;
-        background: linear-gradient(to bottom right, #f5f1eb, #f0e8de);
+       header {
+        background: linear-gradient(to bottom right, #1a1a1a, #2c2c2c);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -253,52 +317,80 @@
 </section>
 
 <section id="showreel">
-    <h2>Showreel</h2>
-    <p>Watch a curated collection of my best visual work.</p>
-    <a href="https://youtube.com" target="_blank" class="btn">Watch Showreel</a>
+
+    <div class="container">
+        <h2>Showreel</h2>
+        <p>Watch my work.</p>
+    </div>
+
+    <div class="centered-content">
+        <a href="yourlink" class="btn">Watch Showreel</a>
+    </div>
+
 </section>
 
 <section id="work">
-    <h2>Selected Work</h2>
-    <p>Explore projects hosted on external platforms to keep the site fast and sleek.</p>
-    <div class="gallery">
-        <a href="https://youtube.com" target="_blank"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video></a>
-        <a href="https://instagram.com" target="_blank"><img src="https://via.placeholder.com/400x300.png" alt="Project Image"></a>
-        <a href="https://drive.google.com" target="_blank"><img src="https://via.placeholder.com/400x300.png" alt="Client Work"></a>
+
+    <div class="container">
+        <h2>Selected Work</h2>
+        <p>Explore my projects.</p>
     </div>
+
+    <div class="centered-content">
+        <!-- your gallery or links -->
+    </div>
+
 </section>
 
 <section id="photos">
+
     <div class="container">
         <h2>Photography</h2>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/400x300.png" alt="Photo 1">
-        <img src="https://via.placeholder.com/400x300.png" alt="Photo 2">
-        <img src="https://via.placeholder.com/400x300.png" alt="Photo 3">
     </div>
+
+    <div class="centered-content">
+        <div class="gallery">
+            <img src="photo1.jpg">
+            <img src="photo2.jpg">
+            <img src="photo3.jpg">
+        </div>
+    </div>
+
 </section>
 
 <section id="services">
-    <h2>Services</h2>
-    <p>
-        Videography · Photography · Creative Direction · Video Editing · Content Creation
-    </p>
+
+    <div class="container">
+        <h2>Services</h2>
+        <p>Videography · Photography · Creative Direction · Editing</p>
+    </div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Let's bring your vision to life. Send me a message below:</p>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <div class="social-links" style="margin-top:20px;">
-        <a href="https://instagram.com" target="_blank">IG</a>
-        <a href="https://youtube.com" target="_blank">YT</a>
-        <a href="https://linkedin.com" target="_blank">IN</a>
+
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Let's bring your vision to life. Send me a message below:</p>
     </div>
+
+    <div class="centered-content">
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links" style="margin-top:20px; text-align:center;">
+            <a href="https://instagram.com" target="_blank">IG</a>
+            <a href="https://youtube.com" target="_blank">YT</a>
+            <a href="https://linkedin.com" target="_blank">IN</a>
+        </div>
+    </div>
+
+</section>
+  
 </section>
 
 <footer>
