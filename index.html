@@ -94,6 +94,20 @@
     object-fit: cover;
     }
 
+    /* Keep content centered but separate from headings */
+.content-block {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Individual images in gallery */
+.gallery img {
+    margin: 15px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
     /* ===== Header ===== */
     header {
         height: 100vh;
@@ -290,6 +304,34 @@
         section h2 {
             font-size: 28px;
         }
+
+        /* General spacing for all sections */
+section {
+    padding: 60px 20px; /* vertical & horizontal padding */
+    margin-bottom: 50px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+/* Headings inside sections */
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Paragraph spacing */
+section p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* For your “View Work” button */
+.centered-content {
+    text-align: center;
+    margin-top: 30px;
+}
     }
 </style>
 </head>
