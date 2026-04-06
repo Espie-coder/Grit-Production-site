@@ -14,42 +14,53 @@
         box-sizing: border-box;
         scroll-behavior: smooth; /* Smooth scrolling */
     }
-   body {
+ body {
     margin: 0;
-    body, p, a {
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
+    background: #1a1a1a;
     color: #f5f1eb;
-    overflow-x: hidden;
-    }
-       
-    section {
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 12px;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #e0b084;
+}
+
+/* Sections */
+section {
     padding: 60px 20px;
     margin-bottom: 50px;
-   }
-        overflow-x: hidden;
-    }
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
 
-     form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+/* Layout control */
+.content-block {
+    max-width: 900px;
     margin: auto;
-    }
+}
 
-    input, textarea {
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #6b705c;
-    border-radius: 6px;
-    font-size: 16px;
-    }
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #c0562b, #e0b084);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
 
     /* TEXT CONTAINER (for headings & paragraphs) */
     .container {
@@ -438,15 +449,7 @@ p {
         <h2>Services</h2>
         <p>Videography · Photography · Creative Direction · Editing</p>
     </div>
-
-    <h2>Photography</h2>
-<div class="content-block">
-    <p>Your descriptive text here.</p>
-</div>
-
-</section>
-
-<section id="contact">
+ <section id="contact">
 
     <div class="container">
         <h2>Contact</h2>
@@ -460,18 +463,8 @@ p {
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-
-        <div class="social-links" style="margin-top:20px; text-align:center;">
-            <a href="https://instagram.com" target="_blank">IG</a>
-            <a href="https://youtube.com" target="_blank">YT</a>
-            <a href="https://linkedin.com" target="_blank">IN</a>
-        </div>
     </div>
-    
-<!-- update -->
-    
-</section>
-  
+
 </section>
 
 <footer>
