@@ -28,8 +28,8 @@ h1, h2 {
 
 /* Sections */
 section {
-    padding: 60px 20px;
-    margin-bottom: 50px;
+    padding: 80px 20px;
+    margin-bottom: 60px;
     background: rgba(255,255,255,0.05);
     border-radius: 12px;
 }
@@ -64,9 +64,10 @@ section {
 
     /* TEXT CONTAINER (for headings & paragraphs) */
     .container {
-    max-width: 800px;
+    max-width: 900px;
     margin-left: 60px;  /* keeps it away from edge but not centered */
     margin-right: 20px;
+    margin: auto;
     }
 
     section h2 {
@@ -121,7 +122,7 @@ section {
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 0 20px;
+        padding: 100px 20px;
     }
     header h1 {
         font-family: 'Oswald', sans-serif;
@@ -132,9 +133,9 @@ section {
         text-shadow: 0 0 20px rgba(224, 176, 132, 0.4);
     }
     header p {
-        font-size: 20px;
-        margin: 15px 0;
-        color: #a2673f; /* Terracotta */
+    margin: 20px 0;
+    font-size: 18px;
+    color: #a2673f; /* Terracotta */
     }
     nav {
         margin-top: 30px;
@@ -151,10 +152,14 @@ section {
     .btn {
     background: linear-gradient(135deg, #c0562b, #e0b084);
     color: white;
-    padding: 14px 28px;
+    padding: 14px 25px;
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
+    .btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
     }
 
     .btn:hover {
@@ -320,8 +325,9 @@ section {
 /* Headings inside sections */
 section h2 {
     margin-top: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
     margin-bottom: 20px;
-    font-size: 36px;
 }
 
 /* Paragraph spacing */
