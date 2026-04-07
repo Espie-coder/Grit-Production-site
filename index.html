@@ -6,8 +6,7 @@
 <title>Grit Production</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
     /* ===== Global Styles ===== */
     * {
@@ -16,13 +15,13 @@
     }
  body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Inter', sans-serif;
     background: #1a1a1a;
     color: #f5f1eb;
 }
 
 h1, h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     color: #e0b084;
 }
 
@@ -125,9 +124,9 @@ section {
         padding: 100px 20px;
     }
     header h1 {
-        font-family: 'Oswald', sans-serif;
+        font-family:'Bebas Neue', sans-serif;
         font-size: 60px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         margin: 0;
         color: #6b705c; /* Olive */
         text-shadow: 0 0 20px rgba(224, 176, 132, 0.4);
@@ -183,7 +182,7 @@ section {
     transform: translateY(0);
     }
     section h2 {
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Bebas Neue', sans-serif;
         font-size: 36px;
         margin-bottom: 20px;
         color: #c0562b;
@@ -237,7 +236,26 @@ section {
     border-radius: 0;
     overflow: hidden;
    }
+.image-section {
+    background: url('detail.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    position: relative;
+}
 
+.image-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.image-section .content-block {
+    position: relative;
+    color: white;
+}
    /* Dark overlay for readability */
    .image-section::before {
     content: "";
@@ -380,15 +398,47 @@ p {
         transform: translateX(0);
     }
 }
+/* NAV ON TOP */
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    font-weight: 500;
+}
+
+/* HERO BACKGROUND */
+.hero {
+    height: 100vh;
+    background: url('portrait.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OVERLAY */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
     }
 </style>
 </head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <body>
 
 <header>
-    <h1>GRIT PRODUCTION</h1>
-    <p>Driven by grit. Defined by storytelling.</p>
+   <header class="hero">
+
     <nav>
         <a href="#about">About</a>
         <a href="#showreel">Showreel</a>
@@ -397,7 +447,13 @@ p {
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
-    <a href="#work" class="btn">View Work</a>
+
+    <div class="overlay">
+        <h1>GRIT PRODUCTION</h1>
+        <p>Driven by grit. Defined by storytelling.</p>
+        <a href="#work" class="btn">View Work</a>
+    </div>
+
 </header>
 <section id="about" class="image-section">
     <h2>About</h2>
