@@ -22,13 +22,6 @@
     color: #f5f1eb;
     overflow-x: hidden;
     }
-       
-    section {
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 12px;
-    padding: 60px 20px;
-    margin-bottom: 50px;
-   }
         overflow-x: hidden;
     }
     a {
@@ -74,11 +67,15 @@
    section p {
     color: #ddd;
    } 
-    /* FADE IN EFFECT */
    section {
     opacity: 0;
-    transform: translateY(60px); /* from right */
+    transform: translateY(60px);
     transition: all 0.8s ease;
+
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 60px 20px;
+    margin-bottom: 50px;
    }
 
    section.visible {
@@ -118,7 +115,7 @@
     margin: 15px;
     border-radius: 10px;
     max-width: 100%;
-}
+  }
 
     /* ===== Header ===== */
     header {
