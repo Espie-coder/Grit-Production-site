@@ -378,18 +378,22 @@ p {
 </head>
 
     <script>
-const sections = document.querySelectorAll('section');
+document.addEventListener("DOMContentLoaded", function () {
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-        }
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
     });
-});
 
-sections.forEach(section => {
-    observer.observe(section);
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
 });
 </script>
 
