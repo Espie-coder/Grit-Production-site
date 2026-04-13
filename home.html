@@ -73,6 +73,17 @@
 
    section p {
     color: #ddd;
+   } 
+    /* FADE IN EFFECT */
+   section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+   }
+
+   section.visible {
+    opacity: 1;
+    transform: translateY(0);
    }
 
     /* CENTERED CONTENT (for images/videos) */
@@ -96,14 +107,14 @@
     }
 
     /* Keep content centered but separate from headings */
-.content-block {
+  .content-block {
     max-width: 900px;
     margin: auto;
     padding: 20px;
-}
+   }
 
-/* Individual images in gallery */
-.gallery img {
+   /* Individual images in gallery */
+   .gallery img {
     margin: 15px;
     border-radius: 10px;
     max-width: 100%;
@@ -375,6 +386,22 @@ p {
     }
 </style>
 </head>
+
+    <script>
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+</script>
 
 <body>
 
